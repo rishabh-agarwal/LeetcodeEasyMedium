@@ -9,7 +9,6 @@ public class RemoveDuplicateElementInArray {
         int[] array = {10, 5, 20, 8, 15, 10, 20, 5};
 
         int[] distinctArray = Arrays.stream(array).distinct().toArray();
-
         System.out.println(Arrays.toString(distinctArray));
     }
 }
