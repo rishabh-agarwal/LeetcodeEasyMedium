@@ -10,9 +10,9 @@ public class FindDuplicateElementInString {
 
     public static void main(String[] args){
         String s = "Ishika Agarwal Ruchi Agarwal Rakesh Agarwal Rishabh Agarwal";
-        String[] s2 = s.split(" ");
-        List<String> stringList = new ArrayList<>();
-        Arrays.stream(s2).forEach(s2s -> stringList.add(s2s));
+        List<String> stringList = Arrays.stream(s.split(" ")).collect(Collectors.toList());
+        //s = s.replaceAll(" ", "");
+        //List<Character> listOfCharacter = s.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
 
         Map<String, Long> stringMapCount = stringList.stream().collect(Collectors.groupingBy(String -> String, Collectors.counting()));
         stringMapCount.entrySet().stream().filter(string -> string.getValue()>1).forEach(System.out::println);
