@@ -4,9 +4,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+//Write a function that takes a string of characters and an integer n and returns the most frequent n-gram. Example: for ‘abcdabxe’ and 2 returns ‘ab’. If there are more than one with the same frequency, return the first one you encountered.
 public class LongestSubstring {
     public static void main(String[] args) {
-        lengthOfLongestSubstring("abcabcbb");
+        lengthOfLongestSubstring("abcdabxe");
     }
     public static int lengthOfLongestSubstring(String s) {
         Map<String, Integer> map = new HashMap<>();
